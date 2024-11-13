@@ -1,69 +1,33 @@
-/*!
-    * Start Bootstrap - Freelancer v6.0.5 (https://startbootstrap.com/theme/freelancer)
-    * Copyright 2013-2020 Start Bootstrap
-    * Licensed under MIT (https://github.com/StartBootstrap/startbootstrap-freelancer/blob/master/LICENSE)
-    */
-    (function($) {
-    "use strict"; // Start of use strict
-  
-    // Smooth scrolling using jQuery easing
-    $('a.js-scroll-trigger[href*="#"]:not([href="#"])').click(function() {
-      if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') && location.hostname == this.hostname) {
-        var target = $(this.hash);
-        target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
-        if (target.length) {
-          $('html, body').animate({
-            scrollTop: (target.offset().top - 71)
-          }, 1000, "easeInOutExpo");
-          return false;
-        }
-      }
-    });
-  
-    // Scroll to top button appear
-    $(document).scroll(function() {
-      var scrollDistance = $(this).scrollTop();
-      if (scrollDistance > 100) {
-        $('.scroll-to-top').fadeIn();
-      } else {
-        $('.scroll-to-top').fadeOut();
-      }
-    });
-  
-    // Closes responsive menu when a scroll trigger link is clicked
-    $('.js-scroll-trigger').click(function() {
-      $('.navbar-collapse').collapse('hide');
-    });
-  
-    // Activate scrollspy to add active class to navbar items on scroll
-    $('body').scrollspy({
-      target: '#mainNav',
-      offset: 80
-    });
-  
-    // Collapse Navbar
-    var navbarCollapse = function() {
-      if ($("#mainNav").offset().top > 100) {
-        $("#mainNav").addClass("navbar-shrink");
-      } else {
-        $("#mainNav").removeClass("navbar-shrink");
-      }
-    };
-    // Collapse now if page is not at top
-    navbarCollapse();
-    // Collapse the navbar when page is scrolled
-    $(window).scroll(navbarCollapse);
-  
-    // Floating label headings for the contact form
-    $(function() {
-      $("body").on("input propertychange", ".floating-label-form-group", function(e) {
-        $(this).toggleClass("floating-label-form-group-with-value", !!$(e.target).val());
-      }).on("focus", ".floating-label-form-group", function() {
-        $(this).addClass("floating-label-form-group-with-focus");
-      }).on("blur", ".floating-label-form-group", function() {
-        $(this).removeClass("floating-label-form-group-with-focus");
-      });
-    });
-  
-  })(jQuery); // End of use strict
+<!-- Example Navbar -->
+<nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
+  <a class="navbar-brand js-scroll-trigger" href="#home">Home</a>
+  <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarResponsive">
+    <ul class="navbar-nav ml-auto">
+      <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#about">About</a></li>
+      <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#portfolio">Portfolio</a></li>
+      <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#contact">Contact</a></li>
+    </ul>
+  </div>
+</nav>
+
+<!-- Example Contact Form with Floating Labels -->
+<form name="sentMessage" id="contactForm" method="POST" action="https://formspree.io/f/xanyjpel">
+  <div class="floating-label-form-group">
+    <label for="name">Name</label>
+    <input type="text" id="name" class="form-control" placeholder="Your Name" required />
+  </div>
+  <div class="floating-label-form-group">
+    <label for="email">Email</label>
+    <input type="email" id="email" class="form-control" placeholder="Your Email" required />
+  </div>
+  <div class="floating-label-form-group">
+    <label for="message">Message</label>
+    <textarea id="message" class="form-control" placeholder="Your Message" required></textarea>
+  </div>
+  <button type="submit" class="btn btn-primary">Send Message</button>
+</form>
+
   
