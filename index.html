@@ -1,242 +1,175 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Kabi Raj Bhatta - Portfolio</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
+    <title>Kabi Raj Bhatta</title>
     <style>
+        /* Global styles */
         body {
-            font-family: 'Roboto', sans-serif;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
         }
 
-        .navbar {
-            background-color: #333;
+        h1, h2, p {
+            margin: 0;
+            padding: 10px;
         }
 
-        .navbar-nav .nav-item .nav-link {
-            color: #fff !important;
+        .container {
+            width: 100%;
+            margin: 0 auto;
+            padding: 20px;
         }
 
-        .page-section {
-            padding: 100px 0;
-        }
-
-        .bg-primary {
-            background-color: #007bff;
-        }
-
-        .text-white {
+        /* Background */
+        header {
+            background-image: url('https://raw.githubusercontent.com/Kabirajbhatta/Images-/refs/heads/main/Backgrounfd.jpg');
+            background-size: cover;
+            background-position: center;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
             color: white;
+            text-align: center;
+            position: relative;
         }
 
-        .divider-custom {
-            margin: 30px 0;
+        header h1 {
+            font-size: 4em;
+        }
+
+        /* About Section */
+        .about {
+            background-color: #fff;
+            padding: 50px;
             text-align: center;
         }
 
-        .divider-custom-line {
-            width: 20%;
-            height: 2px;
-            background-color: #fff;
-            margin: 0 auto;
+        .about p {
+            font-size: 1.2em;
         }
 
-        .divider-custom-icon {
-            font-size: 24px;
-            color: #fff;
+        /* Family Section */
+        .family {
+            background-color: #f9f9f9;
+            padding: 50px;
         }
 
-        .footer {
-            background-color: #333;
-            color: #fff;
-            padding: 40px 0;
+        .family h2 {
+            font-size: 2em;
+            margin-bottom: 20px;
         }
 
-        .footer a {
-            color: #fff;
+        .family p {
+            font-size: 1.1em;
+            margin-bottom: 30px;
         }
 
-        .scroll-to-top {
-            display: none;
-            position: fixed;
-            bottom: 20px;
-            right: 20px;
-            background-color: #007bff;
-            padding: 10px;
-            border-radius: 50%;
-            color: #fff;
+        .family-images {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
         }
 
-        .scroll-to-top a {
-            text-decoration: none;
-            color: #fff;
+        .family-images img {
+            width: 250px;
+            height: 250px;
+            object-fit: cover;
+            border-radius: 10px;
         }
 
-        .social-links a {
-            font-size: 30px;
-            margin-right: 15px;
-            color: #fff;
+        /* Section for family text */
+        .family-text {
+            text-align: center;
+            font-size: 1.2em;
+            font-weight: bold;
+            padding: 20px;
         }
 
-        .social-links a:hover {
-            color: #007bff;
+        .family-text p {
+            font-size: 1.2em;
+            font-weight: bold;
+            margin-top: 20px;
+        }
+
+        /* Additional Section for Brother & Sister */
+        .siblings {
+            background-color: #eaeaea;
+            padding: 50px;
+            text-align: center;
+        }
+
+        .siblings h2 {
+            font-size: 2em;
+            margin-bottom: 20px;
+        }
+
+        .siblings p {
+            font-size: 1.1em;
+            margin-bottom: 30px;
+        }
+
+        .siblings-images {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+
+        .siblings-images img {
+            width: 250px;
+            height: 250px;
+            object-fit: cover;
+            border-radius: 10px;
         }
     </style>
 </head>
+<body>
 
-<body id="page-top">
-    <!-- Navigation-->
-    <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
-        <div class="container">
-            <a class="navbar-brand" href="#page-top">Kabi Raj Bhatta</a>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ml-auto">
-                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#about">About</a></li>
-                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#portfolio">Portfolio</a></li>
-                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#contact">Contact</a></li>
-                </ul>
-            </div>
-        </div>
-    </nav>
+    <!-- Header Section -->
+    <header>
+        <h1>Kabi Raj Bhatta</h1>
+    </header>
 
     <!-- About Section -->
-    <section class="page-section bg-primary text-white mb-0" id="about">
-        <div class="container">
-            <h2 class="page-section-heading text-center text-uppercase text-white">About</h2>
-            <div class="divider-custom divider-light">
-                <div class="divider-custom-line"></div>
-                <div class="divider-custom-icon"><i class="fas fa-star"></i></div>
-                <div class="divider-custom-line"></div>
-            </div>
-            <div class="row">
-                <div class="col-lg-4 ml-auto">
-                    <p class="lead">Hello, I am Kabi Raj Bhatta, a passionate coding learner from Nepal.</p>
-                </div>
-                <div class="col-lg-4 mr-auto">
-                    <p class="lead">Thank you for visiting my personal website.</p>
-                </div>
-            </div>
+    <div class="about">
+        <h2>About Me</h2>
+        <p>Kabi Raj Bhatta, born on January 29, 2006, in Dadeldhura, Nepal, is currently pursuing a Bachelor's in Information Technology. Now based in Sydney, Australia, Kabi is deeply passionate about the IT industry, with a focus on developing technical expertise and contributing to innovations in the field. Through his studies and hands-on experiences, he aims to leverage technology to solve real-world problems and make a meaningful impact.</p>
+    </div>
+
+    <!-- Family Section -->
+    <div class="family">
+        <h2>Family</h2>
+        <p>As a son, I am blessed to have been shaped by the love and wisdom of two incredible people. My father, with his strength and guidance, taught me the importance of resilience and honor, while my mother, with her unconditional love and nurturing spirit, showed me the true meaning of kindness and sacrifice. Together, they gave me the foundation to dream, grow, and become the person I am today, and for that, I will be forever grateful.</p>
+
+        <!-- Parents Photos -->
+        <div class="family-images">
+            <img src="https://raw.githubusercontent.com/Kabirajbhatta/Images-/refs/heads/main/Side.jpg" alt="Father">
+            <img src="https://raw.githubusercontent.com/Kabirajbhatta/Images-/refs/heads/main/Side%20(2).jpg" alt="Mother">
         </div>
-    </section>
 
-    <!-- Portfolio Section -->
-    <section class="page-section" id="portfolio">
-        <div class="container">
-            <h2 class="page-section-heading text-center text-uppercase text-secondary mb-0">Portfolio</h2>
-            <div class="divider-custom">
-                <div class="divider-custom-line"></div>
-                <div class="divider-custom-icon"><i class="fas fa-star"></i></div>
-                <div class="divider-custom-line"></div>
-            </div>
-            <div class="row">
-                <!-- Portfolio Item 1 -->
-                <div class="col-md-4">
-                    <div class="card">
-                        <img src="assets/img/portfolio/cabin.png" class="card-img-top" alt="Project 1">
-                        <div class="card-body">
-                            <h5 class="card-title">Log Cabin</h5>
-                            <p class="card-text">Project description goes here.</p>
-                            <a href="#" class="btn btn-primary">View Details</a>
-                        </div>
-                    </div>
-                </div>
-                <!-- Portfolio Item 2 -->
-                <div class="col-md-4">
-                    <div class="card">
-                        <img src="assets/img/portfolio/cake.png" class="card-img-top" alt="Project 2">
-                        <div class="card-body">
-                            <h5 class="card-title">Tasty Cake</h5>
-                            <p class="card-text">Project description goes here.</p>
-                            <a href="#" class="btn btn-primary">View Details</a>
-                        </div>
-                    </div>
-                </div>
-                <!-- Portfolio Item 3 -->
-                <div class="col-md-4">
-                    <div class="card">
-                        <img src="assets/img/portfolio/circus.png" class="card-img-top" alt="Project 3">
-                        <div class="card-body">
-                            <h5 class="card-title">Circus Tent</h5>
-                            <p class="card-text">Project description goes here.</p>
-                            <a href="#" class="btn btn-primary">View Details</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
+        <!-- Family Text Section -->
+        <div class="family-text">
+            <p>"As a son, I am blessed to have been shaped by the love and wisdom of two incredible people. My father, with his strength and guidance, taught me the importance of resilience and honor, while my mother, with her unconditional love and nurturing spirit, showed me the true meaning of kindness and sacrifice. Together, they gave me the foundation to dream, grow, and become the person I am today, and for that, I will be forever grateful."</p>
         </div>
-    </section>
+    </div>
 
-    <!-- Contact Section -->
-    <section class="page-section" id="contact">
-        <div class="container">
-            <h2 class="page-section-heading text-center text-uppercase text-secondary mb-0">Contact Me</h2>
-            <div class="divider-custom">
-                <div class="divider-custom-line"></div>
-                <div class="divider-custom-icon"><i class="fas fa-star"></i></div>
-                <div class="divider-custom-line"></div>
-            </div>
-            <form action="https://formspree.io/f/xanyjpel" method="POST">
-                <div class="form-group">
-                    <label for="name">Name:</label>
-                    <input type="text" class="form-control" id="name" name="name" required>
-                </div>
-                <div class="form-group">
-                    <label for="email">Email:</label>
-                    <input type="email" class="form-control" id="email" name="email" required>
-                </div>
-                <div class="form-group">
-                    <label for="message">Message:</label>
-                    <textarea class="form-control" id="message" name="message" required></textarea>
-                </div>
-                <button type="submit" class="btn btn-primary">Send Message</button>
-            </form>
+    <!-- Siblings Section -->
+    <div class="siblings">
+        <h2>My Siblings</h2>
+        <p>Below are the photos of my brother and sister who have been a big part of my life. I am thankful for the love and support they have always provided.</p>
+
+        <!-- Siblings Photos -->
+        <div class="siblings-images">
+            <img src="https://raw.githubusercontent.com/Kabirajbhatta/Images-/refs/heads/main/Bhuwan.jpg" alt="Brother">
+            <img src="https://raw.githubusercontent.com/Kabirajbhatta/Images-/refs/heads/main/kabita.jpg" alt="Sister">
         </div>
-    </section>
+    </div>
 
-    <!-- Footer Section -->
-    <footer class="footer text-center">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-4 mb-5 mb-lg-0">
-                    <h4 class="text-uppercase mb-4">Location</h4>
-                    <p class="lead mb-0">Kailali, Nepal<br>Godawari</p>
-                </div>
-                <div class="col-lg-4 mb-5 mb-lg-0">
-                    <h4 class="text-uppercase mb-4">Around the Web</h4>
-                    <div class="social-links">
-                        <a href="https://www.facebook.com/KabirajBhattta"><i class="fab fa-facebook-f"></i></a>
-                        <a href="https://www.instagram.com/kabiraj_29/"><i class="fab fa-instagram"></i></a>
-                        <a href="https://www.youtube.com/@Kabiraj_bhatta"><i class="fab fa-youtube"></i></a>
-                        <a href="https://www.tiktok.com/@kabiraj_bhatta"><i class="fab fa-tiktok"></i></a>
-                    </div>
-                </div>
-                <div class="col-lg-4">
-                    <h4 class="text-uppercase mb-4">About Me</h4>
-                    <p class="lead mb-0">I am Kabi Raj, a passionate coder and creator.</p>
-                </div>
-            </div>
-        </div>
-    </footer>
-
-    <!-- Scroll to Top Button-->
-    <a class="scroll-to-top rounded" href="#page-top">
-        <i class="fas fa-angle-up"></i>
-    </a>
-
-    <!-- Bootstrap core JS-->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js"></script>
-    <!-- Core theme JS-->
-    <script src="js/scripts.js"></script>
 </body>
-
 </html>
-
